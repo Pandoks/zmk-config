@@ -15,13 +15,13 @@
                 default_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | SHFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// | LSHFT|  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | ENT | LWR |   | RSE | SPC  | ALT |
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LSHFT &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
+   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
                     &kp LGUI &kp RET &mo 1   &mo 2 &kp SPACE &kp RALT
                         >;
                 };
@@ -29,13 +29,13 @@
                 layer_below {
 // -----------------------------------------------------------------------------------------
 // |  TAB | F1  | F2  | F3  | F4  | F5  |   | HOM | PGD | PGU | END |     | DEL  |
-// | SHFT | F6  | F7  | F8  | F9  | F10 |   | LFT | DWN | UP  | RGT |     |  ~   |
-// | CTRL | CAPS|     | PRV | NXT | PP  |   |  _  |  +  |  |  |  {  |  }  | ESC  |
+// | CTRL | F6  | F7  | F8  | F9  | F10 |   | LFT | DWN | UP  | RGT |     |  ~   |
+// | LSHFT| CAPS|     | PRV | NXT | PP  |   |  _  |  +  |  |  |  {  |  }  | ESC  |
 //                    | GUI | ENT |     |   |     | SPC | ALT |
                         bindings = <
    &kp  TAB  &kp F1   &kp F2 &kp F3     &kp F4     &kp F5     &kp HOME  &kp PG_DN   &kp PG_UP &kp END   &trans   &kp DEL
-   &kp LSHFT &kp F6   &kp F7 &kp F8     &kp F9     &kp F10    &kp LEFT  &kp DOWN    &kp UP    &kp RIGHT &trans   &kp TILDE
-   &kp LCTRL &kp CAPS &trans &kp C_PREV &kp C_NEXT &kp C_PP   &kp UNDER &kp KP_PLUS &kp PIPE  &kp LBRC  &kp RBRC &kp ESC
+   &kp LCTRL &kp F6   &kp F7 &kp F8     &kp F9     &kp F10    &kp LEFT  &kp DOWN    &kp UP    &kp RIGHT &trans   &kp TILDE
+   &kp LSHFT &kp CAPS &trans &kp C_PREV &kp C_NEXT &kp C_PP   &kp UNDER &kp KP_PLUS &kp PIPE  &kp LBRC  &kp RBRC &kp ESC
                                     &kp LGUI &kp RET &trans   &trans &kp SPACE &kp RALT
                         >;
                 };
@@ -43,13 +43,13 @@
                 layer_above {
 // ----------------------------------------------------------------------------------------
 // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | DEL  |
-// | SHFT |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  `   |
-// | CTRL | DDWN| DUP | VDWN| VUP | VMT |   |  -  |  =  |  \  |  [  |  ]  | ESC  |
+// | CTRL |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  `   |
+// | LSHFT| DDWN| DUP | VDWN| VUP | VMT |   |  -  |  =  |  \  |  [  |  ]  | ESC  |
 //                    | GUI | ENT |     |   |     | SPC | ALT |
                         bindings = <
    &kp TAB    &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT    &kp CARET &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &kp DEL
-   &kp LSHFT  &kp KP_N1    &kp KP_N2    &kp KP_N3    &kp KP_N4    &kp KP_N5    &kp KP_N6 &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_N0 &kp GRAVE
-   &kp LCTRL  &kp C_BRI_DN &kp C_BRI_UP &kp C_VOL_DN &kp C_VOL_UP &kp K_MUTE   &kp MINUS &kp EQUAL  &kp BSLH  &kp LBKT  &kp RBKT  &kp ESC
+   &kp LCTRL  &kp KP_N1    &kp KP_N2    &kp KP_N3    &kp KP_N4    &kp KP_N5    &kp KP_N6 &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_N0 &kp GRAVE
+   &kp LSHFT  &kp C_BRI_DN &kp C_BRI_UP &kp C_VOL_DN &kp C_VOL_UP &kp K_MUTE   &kp MINUS &kp EQUAL  &kp BSLH  &kp LBKT  &kp RBKT  &kp ESC
                                                      &kp LGUI &kp RET &trans   &trans &kp SPACE &kp RALT
                         >;
                 };
