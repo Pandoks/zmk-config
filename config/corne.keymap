@@ -11,24 +11,38 @@
 / {
   combos {
     compatible = "zmk,combos";
-    combo_blt_next {
+    combo_blt_clear {
       timeout-ms = <50>;
+      key-positions = <36 37 38 39 40 41>;
+      bindings = <&bt BT_CLR>;
     };
-    combo_blt_prev {
+    combo_blt_profile_1 {
       timeout-ms = <50>;
+      key-positions = <36 37 38 39>;
+      bindings = <&bt BT_SEL 0>;
+    };
+    combo_blt_profile_2 {
+      timeout-ms = <50>;
+      key-positions = <38 39 40 41>;
+      bindings = <&bt BT_SEL 1>;
     };
   };
-}
+};
+// --------------------------key-positions--------------------------------------------------
+// |  0 |  1 |  2 |  3 |  4 |  5 |   |  6 |  7 |  8 |  9 | 10 | 11 |
+// | 12 | 13 | 14 | 15 | 16 | 17 |   | 18 | 19 | 20 | 21 | 22 | 23 |
+// | 24 | 25 | 26 | 27 | 28 | 29 |   | 30 | 31 | 32 | 33 | 34 | 35 |
+//                | 36 | 37 | 38 |   | 39 | 40 | 41 |
 
 / {
   keymap {
     compatible = "zmk,keymap";
     default_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | LSHFT|  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ALT  |
-//                    | GUI | ENT | LWR |   | RSE | SPC  | ESC |
+// | TAB   |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+// | CTRL  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// | LSHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ALT  |
+//                     | GUI | ENT | LWR |   | RSE | SPC  | ESC |
       bindings = <
 &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
 &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
@@ -39,10 +53,10 @@
 
     layer_below { // layer 1
 // -----------------------------------------------------------------------------------------
-// |  TAB | F1  | F2  | F3  | F4  | F5  |   | HOM | PGD | PGU | END |     | DEL  |
-// | CTRL | F6  | F7  | F8  | F9  | F10 |   | LFT | DWN | UP  | RGT |     |  `   |
-// | LSHFT| CAPS|     | PRV | NXT | PP  |   |  _  |  +  |  |  |  {  |  }  | ALT  |
-//                    | GUI | ENT |     |   |     | SPC | ESC |
+// | TAB   | F1  | F2  | F3  | F4  | F5  |   | HOM | PGD | PGU | END |     | DEL |
+// | CTRL  | F6  | F7  | F8  | F9  | F10 |   | LFT | DWN | UP  | RGT |     |  `  |
+// | LSHFT | CAPS|     | PRV | NXT | PP  |   |  _  |  +  |  |  |  {  |  }  | ALT |
+//                     | GUI | ENT |     |   |     | SPC | ESC |
       bindings = <
 &kp  TAB  &kp F1   &kp F2 &kp F3     &kp F4     &kp F5     &kp HOME  &kp PG_DN   &kp PG_UP &kp END   &trans   &kp DEL
 &kp LCTRL &kp F6   &kp F7 &kp F8     &kp F9     &kp F10    &kp LEFT  &kp DOWN    &kp UP    &kp RIGHT &trans   &kp GRAVE
