@@ -18,12 +18,12 @@
     };
     combo_blt_profile_1 {
       timeout-ms = <50>;
-      key-positions = <36 37 38 39>;
+      key-positions = <38 39 40 41>;
       bindings = <&bt BT_SEL 0>;
     };
     combo_blt_profile_2 {
       timeout-ms = <50>;
-      key-positions = <38 39 40 41>;
+      key-positions = <36 37 38 39>;
       bindings = <&bt BT_SEL 1>;
     };
   };
