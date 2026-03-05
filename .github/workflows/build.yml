@@ -25,7 +25,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           REPO: ${{ github.repository }}
         run: |
-          latest=$(gh api "repos/${REPO}/releases/latest" --jq '.tag_name' 2>/dev/null || echo "v0")
+          latest=$(gh api "repos/${REPO}/releases/latest" --jq '.tag_name' 2>/dev/null) || latest="v0"
           echo "tag=v$(( ${latest#v} + 1 ))" >> "$GITHUB_OUTPUT"
 
       - name: Create release
