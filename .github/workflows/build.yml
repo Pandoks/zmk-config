@@ -37,5 +37,5 @@ jobs:
         run: |
           gh release create "$TAG" firmware/* \
             --repo "$REPO" \
-            --title "Firmware ${TAG}" \
+            --title "${TAG}" \
             --notes "Firmware build from commit ${SHA}"
